@@ -9,10 +9,10 @@ function Header() {
         </figure>
         {/* > 1280px */}
         <figure className="earth-icon">
-          <img src="src/assets/earth.png" alt="Languages" width="70" height="70"/>
+          <img src="src/assets/earth.png" alt="Languages" />
         </figure>
         <figure className="user-icon">
-          <img src="src/assets/user.png" alt="User" width="40" height="40" />
+          <img src="src/assets/user.png" alt="User" />
         </figure>
       </section>
     </>

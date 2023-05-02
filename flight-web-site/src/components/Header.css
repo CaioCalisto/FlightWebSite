@@ -16,24 +16,12 @@
   max-width: 200px;
 }
 
-.earth-icon {
+.icon {
   width: 10%;
   padding: 5px;
 }
 
-.earth-icon img {
-  width: 100%;
-  height: auto;
-  min-width: 20px;
-  max-width: 70px;
-}
-
-.user-icon {
-  width: 10%;
-  padding: 5px;
-}
-
-.user-icon img {
+.icon img {
   width: 100%;
   height: auto;
   min-width: 20px;

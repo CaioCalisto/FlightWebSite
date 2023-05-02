@@ -8,11 +8,11 @@ function Header() {
           <img src="src/assets/ACME-logo.png" alt="Logotipo" width="150" height="150" />
         </figure>
         {/* > 1280px */}
-        <figure className="earth-icon">
+        <figure className="icon">
           <img src="src/assets/earth.png" alt="Languages" />
         </figure>
         {/* all screen sizes */}
-        <figure className="user-icon">
+        <figure className="icon">
           <img src="src/assets/user.png" alt="User" />
         </figure>
       </section>

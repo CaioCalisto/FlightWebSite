@@ -1,29 +1,7 @@
-.header-section {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-}
 
-.logotipo {
-  width: 20%;
-}
 
-.logotipo img {
-  width: 100%;
-  height: auto;
-  min-width: 50px;
-  max-width: 200px;
-}
-
-.icon {
-  width: 10%;
-  padding: 5px;
-}
-
-.icon img {
-  width: 100%;
-  height: auto;
-  min-width: 20px;
-  max-width: 70px;
+@media screen and (max-width: 1199px) {
+  .earth-icon {
+    display: none;
+  }
 }

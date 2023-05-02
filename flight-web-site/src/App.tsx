@@ -1,21 +1,23 @@
+import { Container, Navbar, Stack, ThemeProvider } from "react-bootstrap"
 import { Route, Router, Routes } from "react-router-dom"
 import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Home from "./pages/Home"
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   
   return (
     <>
-      <header className="header">
+      <Navbar sticky="top" style={{ padding: "0", margin: "0", width: "100%" }}>
         <Header />
-      </header>
+      </Navbar>
       <Routes>
-        <Route path="/" element={<Home />} />
+         <Route path="/" element={<Home />} />
       </Routes>
-      <div className="footer">
+      <Navbar fixed="bottom">
         <Footer />
-      </div>
+      </Navbar>
     </>
   )
 }

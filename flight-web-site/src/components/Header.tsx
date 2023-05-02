@@ -11,6 +11,7 @@ function Header() {
         <figure className="earth-icon">
           <img src="src/assets/earth.png" alt="Languages" />
         </figure>
+        {/* all screen sizes */}
         <figure className="user-icon">
           <img src="src/assets/user.png" alt="User" />
         </figure>

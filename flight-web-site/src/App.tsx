@@ -1,17 +1,21 @@
+import { Route, Router, Routes } from "react-router-dom"
+import Footer from "./components/Footer"
+import Header from "./components/Header"
+import Home from "./pages/Home"
 
 function App() {
   
   return (
     <>
       <header className="header">
-        <h1>HEADER</h1>
+        <Header />
       </header>
-      <main className="original-content">
-        <h1>CONTENT</h1>
-      </main>
-      <footer className="footer">
-        <h1>FOOTER</h1>
-      </footer>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+      <div className="footer">
+        <Footer />
+      </div>
     </>
   )
 }

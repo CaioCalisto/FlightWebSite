@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-areas: 
+  "header"
+  "original-content"
+  "footer";
+}
+
+.header {
+  display: grid;
+  grid-area: header;
+  background-color: blue;
+}
+
+.original-content {
+  display: grid;
+  grid-area: original-content;
+  background-color: red;
+  grid-auto-rows: calc(100vh - 100px);
+}
+
+.footer {
+  display: grid;
+  grid-area: footer;
+  background-color: green;
+}

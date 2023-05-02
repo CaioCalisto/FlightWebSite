@@ -1,0 +1,17 @@
+.logotipo-section {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+
+.logotipo {
+  width: 20%;
+}
+
+.logotipo img {
+  width: 100%;
+  height: auto;
+  min-width: 50px;
+  max-width: 200px;
+}

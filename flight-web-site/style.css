@@ -15,13 +15,13 @@ body {
 .header {
   display: grid;
   grid-area: header;
-  background-color: blue;
+  background-color: rgb(10, 75, 241);
 }
 
 .original-content {
   display: grid;
   grid-area: original-content;
-  background-color: red;
+  background-color: whitesmoke;
   grid-auto-rows: calc(100vh - 100px);
 }
 

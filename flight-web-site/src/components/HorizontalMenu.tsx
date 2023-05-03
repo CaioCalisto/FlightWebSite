@@ -6,7 +6,7 @@ function HorizontalMenu() {
       direction="horizontal"
       gap={3}
       className="d-flex justify-content-center"
-      style={{ width: "100%", padding: "1em 1em 1em 1em", backgroundColor: "rgb(218, 212, 212)" }}
+      style={{ width: "100%", padding: "1em 1em 1em 1em" }}
     >
       <span>&#9992; Flights</span>
       <div className="vr" />

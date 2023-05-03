@@ -4,13 +4,17 @@ import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Home from "./pages/Home"
 import 'bootstrap/dist/css/bootstrap.min.css'
+import HorizontalMenu from "./components/HorizontalMenu"
 
 function App() {
   
   return (
     <Container fluid>
-      <Navbar sticky="top" style={{ padding: "0", margin: "0", width: "100%" }}>
+      <Navbar style={{ padding: "0" }}>
         <Header />
+      </Navbar>
+      <Navbar style={{ padding: "0" }}>
+        <HorizontalMenu />
       </Navbar>
       <Routes>
         <Route path="/" element={<Home />} />

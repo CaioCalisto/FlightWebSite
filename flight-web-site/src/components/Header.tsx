@@ -3,7 +3,7 @@ import { Col, Container, Image, Row, Stack } from "react-bootstrap";
 
 function Header() {
   return (
-    <Stack direction="horizontal" style={{ padding: "0 1em 0 1em", backgroundColor: "blue" }}>
+    <Stack direction="horizontal" style={{ padding: "0 1em 0 1em", backgroundColor: "rgba(202, 214, 202, 0.718)" }}>
       <Row className="d-flex align-items-center" style={{ padding: "0 1em 0 1em" }}>
         <Col className="d-flex justify-content-start">
           <Image src="src/assets/ACME-logo.png" style={{ width: "30%" }} />

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Offcanvas } from "react-bootstrap";
+import { Button, Nav, Offcanvas } from "react-bootstrap";
 
 function SideBarMenu() {
   const [show, setShow] = useState(false);
@@ -13,13 +13,16 @@ function SideBarMenu() {
         &#9824;
       </Button>
 
-      <Offcanvas show={show} onHide={handleClose}>
-      <Offcanvas.Header closeButton>
-        <Offcanvas.Title>Menu</Offcanvas.Title>
-      </Offcanvas.Header>
-      <Offcanvas.Body>
-        
-      </Offcanvas.Body>
+      <Offcanvas show={show} onHide={handleClose} >
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>Menu</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          <Nav className="justify-content-start flex-grow-1 pe-3">
+            <Nav.Link href="#action1"><span>&#9992; Flights</span></Nav.Link>
+            <Nav.Link href="#action2"><span>&#128665; Car Hire</span></Nav.Link>
+          </Nav>
+        </Offcanvas.Body>
       </Offcanvas>
   
     </>

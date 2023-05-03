@@ -5,6 +5,7 @@ import Header from "./components/Header"
 import Home from "./pages/Home"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import HorizontalMenu from "./components/HorizontalMenu"
+import './App.css'
 
 function App() {
   
@@ -13,7 +14,7 @@ function App() {
       <Navbar style={{ padding: "0" }}>
         <Header />
       </Navbar>
-      <Navbar style={{ padding: "0" }}>
+      <Navbar className="horizontal-menu" style={{ padding: "0" }}>
         <HorizontalMenu />
       </Navbar>
       <Routes>

@@ -1,7 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/* || VARIABLES */
+:root {
+  --FONT-FAMILY: "Nunito", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--FONT-FAMILY);
+  font-size: calc(15px + 0.390625vw);
 }
 
 body {

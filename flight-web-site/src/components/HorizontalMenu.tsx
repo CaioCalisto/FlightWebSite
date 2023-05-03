@@ -1,6 +1,4 @@
-import "./HorizontalMenu.css";
-
-import { Col, Row, Stack } from "react-bootstrap";
+import { Stack } from "react-bootstrap";
 
 function HorizontalMenu() {
   return (

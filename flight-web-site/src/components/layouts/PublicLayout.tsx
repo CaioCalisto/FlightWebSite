@@ -4,6 +4,7 @@ import Footer from "../Footer";
 import Header from "../Header";
 import HorizontalMenu from "../HorizontalMenu";
 import SideBarMenu from "../SideBarMenu";
+import SmallFooter from "../SmallFooter";
 
 type LayoutProps = {
   children: ReactNode;
@@ -14,9 +15,9 @@ function PublicLayout({ children }: LayoutProps) {
 
   if (medium) {
     return (
-      <>        
+      <div>        
         <section>
-          <Container component="header" style={{ margin: "0", maxWidth: "100%" }}>
+          <Container component="header" style={{ maxWidth: "100%" }}>
             <Header />
           </Container>
         </section>
@@ -27,11 +28,11 @@ function PublicLayout({ children }: LayoutProps) {
         </section>
         <main>{children}</main>
         <section>
-        <Container component="footer" style={{ position: "fixed", bottom: "0" }}>
+        <Container component="footer" style={{ position: "fixed", bottom: "0", maxWidth: "100%" }}>
           <Footer />
         </Container>
         </section>
-      </>
+      </div>
     );
   }
 
@@ -50,7 +51,7 @@ function PublicLayout({ children }: LayoutProps) {
       <main>{children}</main>
       <section>
         <Container component="footer" style={{ position: "fixed", bottom: "0"}}>
-          <Footer />
+          <SmallFooter />
         </Container>
       </section>
     </>

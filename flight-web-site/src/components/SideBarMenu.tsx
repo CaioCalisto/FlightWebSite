@@ -1,6 +1,14 @@
-import { Button, Drawer, List, ListItem, ListItemButton, ListItemText } from "@mui/material";
+import {
+  Button,
+  Drawer,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+} from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
+import { Link } from "react-router-dom";
 
 function SideBarMenu() {
   const [state, setState] = React.useState(false);
@@ -29,21 +37,25 @@ function SideBarMenu() {
           onKeyDown={toggleDrawer(false)}
         >
           <List>
-            <ListItem key={'flight'} disablePadding>
-              <ListItemButton>
-                <ListItemText primary={'Flight'} />
-                &#9992; 
-              </ListItemButton>
+            <ListItem key={"flight"} disablePadding>
+              <Link to="/flights">
+                <ListItemButton>
+                  <ListItemText primary={"Flight"} />
+                  &#9992;
+                </ListItemButton>
+              </Link>
             </ListItem>
-            <ListItem key={'carHire'} disablePadding>
-              <ListItemButton>
-                <ListItemText primary={'Car Hire'} />
-                &#128665;
-              </ListItemButton>
+            <ListItem key={"carHire"} disablePadding>
+              <Link to="/carhire">
+                <ListItemButton>
+                  <ListItemText primary={"Car Hire"} />
+                  &#128665;
+                </ListItemButton>
+              </Link>
             </ListItem>
-            <ListItem key={'hotels'} disablePadding>
+            <ListItem key={"hotels"} disablePadding>
               <ListItemButton>
-                <ListItemText primary={'Hotels'} />
+                <ListItemText primary={"Hotels"} />
                 &#127977;
               </ListItemButton>
             </ListItem>

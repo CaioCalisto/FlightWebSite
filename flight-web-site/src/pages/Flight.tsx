@@ -11,9 +11,8 @@ import React from "react";
 
 function Flight() {
   return (
-    <Container>
-
-      <RadioGroup row>
+    <>
+      <RadioGroup row style={{ padding: "1rem" }}>
         <FormControlLabel
           value="Return trip"
           control={<Radio />}
@@ -26,13 +25,12 @@ function Flight() {
         />
       </RadioGroup>
 
-      <Stack direction="row" justifyContent="center">
+      <Stack direction="row" justifyContent="left">
         <TextField label="From" />
         <TextField label="To" />
         <Button variant="outlined">Search</Button>
       </Stack>
-
-    </Container>
+    </>
   );
 }
 

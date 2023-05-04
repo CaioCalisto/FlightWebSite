@@ -1,5 +1,6 @@
-import { useMediaQuery } from "@mui/material";
+import { Container, Paper, useMediaQuery } from "@mui/material";
 import React, { ReactNode } from "react";
+import Footer from "../Footer";
 import Header from "../Header";
 import HorizontalMenu from "../HorizontalMenu";
 import SideBarMenu from "../SideBarMenu";
@@ -10,17 +11,26 @@ type LayoutProps = {
 
 function PublicLayout({ children }: LayoutProps) {
   const medium = useMediaQuery("(min-width:768px)");
-  
+
   if (medium) {
     return (
-      <>
+      <>        
         <section>
-          <Header />
+          <Container component="header" style={{ margin: "0", maxWidth: "100%" }}>
+            <Header />
+          </Container>
         </section>
         <section>
-          <HorizontalMenu />
+          <Container>
+           <HorizontalMenu />
+          </Container>
         </section>
         <main>{children}</main>
+        <section>
+        <Container component="footer" style={{ position: "fixed", bottom: "0" }}>
+          <Footer />
+        </Container>
+        </section>
       </>
     );
   }
@@ -28,12 +38,21 @@ function PublicLayout({ children }: LayoutProps) {
   return (
     <>
       <section>
-        <Header />
+        <Container component="header">
+          <Header />
+        </Container>
       </section>
       <section>
-        <SideBarMenu />
+        <Container>
+          <SideBarMenu />
+        </Container>
       </section>
       <main>{children}</main>
+      <section>
+        <Container component="footer" style={{ position: "fixed", bottom: "0"}}>
+          <Footer />
+        </Container>
+      </section>
     </>
   );
 }

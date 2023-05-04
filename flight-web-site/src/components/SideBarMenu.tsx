@@ -37,22 +37,22 @@ function SideBarMenu() {
           onKeyDown={toggleDrawer(false)}
         >
           <List>
-            <ListItem key={"flight"} disablePadding>
-              <Link to="/flights">
+            <Link to="flights">
+              <ListItem key={"flight"} disablePadding>
                 <ListItemButton>
                   <ListItemText primary={"Flight"} />
                   &#9992;
                 </ListItemButton>
-              </Link>
-            </ListItem>
-            <ListItem key={"carHire"} disablePadding>
-              <Link to="/carhire">
+              </ListItem>
+            </Link>
+            <Link to="carhire">
+              <ListItem key={"carHire"} disablePadding>
                 <ListItemButton>
                   <ListItemText primary={"Car Hire"} />
                   &#128665;
                 </ListItemButton>
-              </Link>
-            </ListItem>
+              </ListItem>
+            </Link>
             <ListItem key={"hotels"} disablePadding>
               <ListItemButton>
                 <ListItemText primary={"Hotels"} />

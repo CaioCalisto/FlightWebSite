@@ -1,20 +1,14 @@
-import { Stack } from "react-bootstrap";
+import { Box, Stack } from '@mui/system'
+import React from 'react'
 
 function HorizontalMenu() {
   return (
-    <Stack
-      direction="horizontal"
-      gap={3}
-      className="d-flex justify-content-center"
-      style={{ width: "100%", padding: "1em 1em 1em 1em" }}
-    >
-      <span>&#9992; Flights</span>
-      <div className="vr" />
-      <span>&#128665; Car Hire</span>
-      <div className="vr" />
-      <span>&#127977; Hotels</span>
+    <Stack direction={"row"} spacing={2} justifyContent="center">
+      <Box>&#9992; Flight</Box>
+      <Box>&#128665; Car Hire</Box>
+      <Box>&#127977; Hotels</Box>
     </Stack>
-  );
+  )
 }
 
-export default HorizontalMenu;
+export default HorizontalMenu

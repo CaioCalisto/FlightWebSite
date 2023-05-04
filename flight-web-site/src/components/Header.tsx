@@ -3,7 +3,7 @@ import React from 'react'
 
 function Header() {
   return (
-    <Grid container>
+    <Grid container alignItems="center">
       <Grid item xs={6}>
         <img src="src/assets/ACME-logo.png" style={{ width: "25%"}}/>
       </Grid>

@@ -19,7 +19,9 @@ function LocationText({ label }: LocationTextType) {
     >
       <TextField id="outlined-select-currency" select label={label}>
         {availableLocations.map((option) => (
-          <MenuItem>{option}</MenuItem>
+          <MenuItem key={option} value={option}>
+            {option}
+          </MenuItem>
         ))}
       </TextField>
     </Box>

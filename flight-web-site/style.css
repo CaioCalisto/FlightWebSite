@@ -3,7 +3,7 @@
 /* || VARIABLES */
 :root {
   --FONT-FAMILY: "Nunito", sans-serif;
-  --FONT-SIZE: calc(20px + 1vw)
+  --FONT-SIZE: 2vw
 }
 
 * {

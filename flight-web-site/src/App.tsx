@@ -8,7 +8,7 @@ function App() {
         <div>CONTENT</div>
       </PublicLayout>
     </>
-  );
+  )
 }
 
 export default App;

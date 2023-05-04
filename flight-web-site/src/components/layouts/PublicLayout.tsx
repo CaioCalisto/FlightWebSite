@@ -33,7 +33,7 @@ function PublicLayout({ children }: LayoutProps) {
         </Container>
         </section>
       </div>
-    );
+    )
   }
 
   return (

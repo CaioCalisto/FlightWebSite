@@ -1,4 +1,4 @@
-import { Container, useMediaQuery } from "@mui/material";
+import { Container, Divider, useMediaQuery } from "@mui/material";
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Footer from "../Footer";
@@ -23,6 +23,7 @@ function PublicLayout() {
             <HorizontalMenu />
           </Container>
         </section>
+        <Divider />
         <main>
           <Outlet />
         </main>
@@ -50,6 +51,7 @@ function PublicLayout() {
           <SideBarMenu />
         </Container>
       </section>
+      <Divider />
       <main>
         <Outlet />
       </main>

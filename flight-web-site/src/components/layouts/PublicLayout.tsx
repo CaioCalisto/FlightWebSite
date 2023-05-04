@@ -56,7 +56,9 @@ function PublicLayout() {
       </section>
       <Divider />
       <main>
-        <Outlet />
+      <Container style={{ maxWidth: "100%" }}>
+            <Outlet />
+          </Container>
       </main>
       <Divider />
       <section>

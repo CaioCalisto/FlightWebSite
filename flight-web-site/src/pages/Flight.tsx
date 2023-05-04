@@ -12,7 +12,7 @@ import React from "react";
 function Flight() {
   return (
     <>
-      <RadioGroup row style={{ padding: "1rem" }}>
+      <RadioGroup row style={{ padding: "10px 0 10px 0" }}>
         <FormControlLabel
           value="Return trip"
           control={<Radio />}

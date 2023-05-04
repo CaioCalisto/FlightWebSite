@@ -1,21 +1,18 @@
 import { Container, Paper, useMediaQuery } from "@mui/material";
 import React, { ReactNode } from "react";
+import { Outlet } from "react-router-dom";
 import Footer from "../Footer";
 import Header from "../Header";
 import HorizontalMenu from "../HorizontalMenu";
 import SideBarMenu from "../SideBarMenu";
 import SmallFooter from "../SmallFooter";
 
-type LayoutProps = {
-  children: ReactNode;
-};
-
-function PublicLayout({ children }: LayoutProps) {
+function PublicLayout() {
   const medium = useMediaQuery("(min-width:768px)");
 
   if (medium) {
     return (
-      <div>        
+      <div>
         <section>
           <Container component="header" style={{ maxWidth: "100%" }}>
             <Header />
@@ -23,17 +20,22 @@ function PublicLayout({ children }: LayoutProps) {
         </section>
         <section>
           <Container>
-           <HorizontalMenu />
+            <HorizontalMenu />
           </Container>
         </section>
-        <main>{children}</main>
+        <main>
+          <Outlet />
+        </main>
         <section>
-        <Container component="footer" style={{ position: "fixed", bottom: "0", maxWidth: "100%" }}>
-          <Footer />
-        </Container>
+          <Container
+            component="footer"
+            style={{ position: "fixed", bottom: "0", maxWidth: "100%" }}
+          >
+            <Footer />
+          </Container>
         </section>
       </div>
-    )
+    );
   }
 
   return (
@@ -48,9 +50,14 @@ function PublicLayout({ children }: LayoutProps) {
           <SideBarMenu />
         </Container>
       </section>
-      <main>{children}</main>
+      <main>
+        <Outlet />
+      </main>
       <section>
-        <Container component="footer" style={{ position: "fixed", bottom: "0"}}>
+        <Container
+          component="footer"
+          style={{ position: "fixed", bottom: "0" }}
+        >
           <SmallFooter />
         </Container>
       </section>

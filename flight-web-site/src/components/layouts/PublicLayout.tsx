@@ -1,5 +1,5 @@
-import { Container, Paper, useMediaQuery } from "@mui/material";
-import React, { ReactNode } from "react";
+import { Container, useMediaQuery } from "@mui/material";
+import React from "react";
 import { Outlet } from "react-router-dom";
 import Footer from "../Footer";
 import Header from "../Header";

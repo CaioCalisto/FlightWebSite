@@ -13,3 +13,11 @@
   font-family: var(--FONT-FAMILY);
   font-size: var(--FONT-SIZE);
 }
+
+h1 {
+  font-size: 2vw 
+}
+
+h2 {
+  font-size: 1vw; 
+}

@@ -50,7 +50,7 @@ function PublicLayout() {
         </Container>
       </section>
       <section>
-        <Container>
+        <Container style={{ maxWidth: "100%" }}>
           <SideBarMenu />
         </Container>
       </section>

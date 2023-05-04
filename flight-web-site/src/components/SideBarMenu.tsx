@@ -29,7 +29,8 @@ function SideBarMenu() {
 
   return (
     <>
-      <Button onClick={toggleDrawer(true)} style={{ padding: "0" }}>Menu</Button>
+      {/* <Button onClick={toggleDrawer(true)} style={{ padding: "0" }}>Menu</Button> */}
+      <p onClick={toggleDrawer(true)}>Menu</p>
       <Drawer anchor={"left"} open={state} onClose={toggleDrawer(false)}>
         <Box
           sx={{ width: 150 }}

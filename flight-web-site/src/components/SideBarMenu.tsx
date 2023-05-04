@@ -1,5 +1,6 @@
 import {
   Button,
+  Divider,
   Drawer,
   List,
   ListItem,
@@ -28,10 +29,10 @@ function SideBarMenu() {
 
   return (
     <>
-      <Button onClick={toggleDrawer(true)}>Menu</Button>
+      <Button onClick={toggleDrawer(true)} style={{ padding: "0" }}>Menu</Button>
       <Drawer anchor={"left"} open={state} onClose={toggleDrawer(false)}>
         <Box
-          sx={{ width: 250 }}
+          sx={{ width: 150 }}
           role="presentation"
           onClick={toggleDrawer(false)}
           onKeyDown={toggleDrawer(false)}
@@ -45,6 +46,7 @@ function SideBarMenu() {
                 </ListItemButton>
               </ListItem>
             </Link>
+            <Divider />
             <Link to="carhire">
               <ListItem key={"carHire"} disablePadding>
                 <ListItemButton>
@@ -53,6 +55,7 @@ function SideBarMenu() {
                 </ListItemButton>
               </ListItem>
             </Link>
+            <Divider />
             <ListItem key={"hotels"} disablePadding>
               <ListItemButton>
                 <ListItemText primary={"Hotels"} />

@@ -22,11 +22,13 @@ function DateText({ label } : DateTextType) {
   ));
 
   return (
-    <DatePicker
-      selected={startDate}
-      onChange={(date) => setStartDate(date)}
-      customInput={<ExampleCustomInput />}
-    />
+    <div className='width: 0'>
+      <DatePicker
+        selected={startDate}
+        onChange={(date) => setStartDate(date)}
+        customInput={<ExampleCustomInput />}
+      />
+    </div>
   );
 }
 

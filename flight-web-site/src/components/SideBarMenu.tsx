@@ -10,6 +10,9 @@ import {
 import { Box } from "@mui/system";
 import React from "react";
 import { Link } from "react-router-dom";
+import AirplanemodeActiveIcon from '@mui/icons-material/AirplanemodeActive';
+import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
+import HotelIcon from '@mui/icons-material/Hotel';
 
 function SideBarMenu() {
   const [state, setState] = React.useState(false);
@@ -42,7 +45,7 @@ function SideBarMenu() {
               <ListItem key={"flight"} disablePadding>
                 <ListItemButton>
                   <ListItemText primary={"Flight"} />
-                  &#9992;
+                  <AirplanemodeActiveIcon />
                 </ListItemButton>
               </ListItem>
             </Link>
@@ -51,7 +54,7 @@ function SideBarMenu() {
               <ListItem key={"carHire"} disablePadding>
                 <ListItemButton>
                   <ListItemText primary={"Car Hire"} />
-                  &#128665;
+                  <DirectionsCarIcon />
                 </ListItemButton>
               </ListItem>
             </Link>
@@ -59,7 +62,7 @@ function SideBarMenu() {
             <ListItem key={"hotels"} disablePadding>
               <ListItemButton>
                 <ListItemText primary={"Hotels"} />
-                &#127977;
+                <HotelIcon />
               </ListItemButton>
             </ListItem>
           </List>

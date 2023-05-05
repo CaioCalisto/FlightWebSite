@@ -3,11 +3,12 @@ import React, { useState } from "react";
 
 type LocationTextType = {
   label: string;
+  onLocationChanged: (value: string) => void
 };
 
 const availableLocations = ["Porto", "Lisbon", "Dublin", "Cork"];
 
-function LocationText({ label }: LocationTextType) {
+function LocationText({ label, onLocationChanged }: LocationTextType) {
   return (
     <Box
       component="form"
@@ -17,7 +18,7 @@ function LocationText({ label }: LocationTextType) {
       noValidate
       autoComplete="off"
     >
-      <TextField select label={label}>
+      <TextField select label={label} onChange={(e) => onLocationChanged(e.target.value)}>
         {availableLocations.map((option) => (
           <MenuItem key={option} value={option}>
             {option}

@@ -1,5 +1,7 @@
 import { Box, Grid, Stack } from '@mui/material'
 import React from 'react'
+import PersonIcon from '@mui/icons-material/Person';
+import LanguageIcon from '@mui/icons-material/Language';
 
 function Header() {
   return (
@@ -8,9 +10,9 @@ function Header() {
         <img src="src/assets/ACME-logo.png" style={{ width: "25%"}}/>
       </Grid>
       <Grid item xs={6}>
-        <Stack direction="row" spacing={1} justifyContent="end">
-          <img src="src/assets/earth.png" alt="" style={{ width: "10%"}} />
-          <img src="src/assets/user.png" alt="" style={{ width: "10%"}} />
+        <Stack direction="row" spacing={3} justifyContent="end">
+          <LanguageIcon />
+          <PersonIcon />
         </Stack>
       </Grid>
     </Grid>

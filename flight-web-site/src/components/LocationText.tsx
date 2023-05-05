@@ -17,7 +17,7 @@ function LocationText({ label }: LocationTextType) {
       noValidate
       autoComplete="off"
     >
-      <TextField id="outlined-select-currency" select label={label}>
+      <TextField select label={label}>
         {availableLocations.map((option) => (
           <MenuItem key={option} value={option}>
             {option}

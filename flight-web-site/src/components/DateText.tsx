@@ -6,10 +6,17 @@ import "react-datepicker/dist/react-datepicker.css";
 
 type DateTextType = {
   label: string
+  onDateChanged: (date: Date) => void
 }
 
-function DateText({ label } : DateTextType) {
-  const [startDate, setStartDate] = useState(new Date());
+function DateText({ label, onDateChanged } : DateTextType) {
+
+  const [date, setDate] = useState(new Date());
+  const changeDate = (date: Date) => {
+    setDate(date)
+    onDateChanged(date)
+  }
+
   const ExampleCustomInput = forwardRef(({ value, onClick }, ref) => (
     <Box component="form"
     sx={{
@@ -24,8 +31,8 @@ function DateText({ label } : DateTextType) {
   return (
     <div className='width: 0'>
       <DatePicker
-        selected={startDate}
-        onChange={(date) => setStartDate(date)}
+        selected={date}
+        onChange={(date: Date) => changeDate(date)}
         customInput={<ExampleCustomInput />}
       />
     </div>

@@ -15,17 +15,25 @@ import Passengers from "../components/Passengers";
 import TripChose from "../components/TripChose";
 
 function Flight() {
-  const [startDate, setStartDate] = useState(new Date());
-  
-  const [from, setFrom] = useState("")
-  const changeFrom = (from: string) => {
-    setFrom(from)
+  const [departDate, setDepart] = useState<Date | null>(null);
+  const changeDepart = (date: Date) => {
+    setDepart(date)
   }
 
-  const [to, setTo] = useState("")
-  const changeTo = (to: string) => {
-    setTo(to)
+  const [returnDate, setReturnDate] = useState<Date | null>(null);
+  const changeReturnDate = (date: Date) => {
+    setReturnDate(date)
   }
+
+  const [from, setFrom] = useState("");
+  const changeFrom = (from: string) => {
+    setFrom(from);
+  };
+
+  const [to, setTo] = useState("");
+  const changeTo = (to: string) => {
+    setTo(to);
+  };
 
   return (
     <>
@@ -35,13 +43,19 @@ function Flight() {
         <Stack direction="row">
           <LocationText label="From" onLocationChanged={changeFrom} />
           <LocationText label="To" onLocationChanged={changeTo} />
-          <Button variant="outlined">Search</Button>
         </Stack>
 
         <Stack direction="row">
-          <DateText label="Depart" />
-          <DateText label="Return" />
-          <Passengers />
+          {from != "" && to != "" && (
+            <>
+              <DateText label="Depart" onDateChanged={changeDepart} />
+              <DateText label="Return" onDateChanged={changeReturnDate} />
+              <Passengers />
+            </>
+          )}
+          {departDate != null && returnDate != null && (
+            <Button variant="outlined">Search</Button>
+          )}
         </Stack>
       </Stack>
     </>

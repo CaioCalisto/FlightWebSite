@@ -19,7 +19,7 @@ function PublicLayout() {
           </Container>
         </section>
         <section>
-          <Container>
+          <Container style={{ padding: "0", maxWidth: "100%" }}>
             <HorizontalMenu />
           </Container>
         </section>

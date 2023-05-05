@@ -11,6 +11,7 @@ import {
 import React, { forwardRef, useState } from "react";
 import DateText from "../components/DateText";
 import LocationText from "../components/LocationText";
+import Passengers from "../components/Passengers";
 import TripChose from "../components/TripChose";
 
 function Flight() {
@@ -20,7 +21,7 @@ function Flight() {
     <>
       <Stack direction="column" gap={4}>
         <TripChose />
-        
+
         <Stack direction="row">
           <LocationText label="From" />
           <LocationText label="To" />
@@ -30,6 +31,7 @@ function Flight() {
         <Stack direction="row">
           <DateText label="Depart" />
           <DateText label="Return" />
+          <Passengers />
         </Stack>
       </Stack>
     </>

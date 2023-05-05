@@ -13,7 +13,7 @@ function DateText({ label } : DateTextType) {
   const ExampleCustomInput = forwardRef(({ value, onClick }, ref) => (
     <Box component="form"
     sx={{
-      "& .MuiTextField-root": {width: "25ch" },
+      "& .MuiTextField-root": {width: "18ch" },
     }}
     noValidate
     autoComplete="off">

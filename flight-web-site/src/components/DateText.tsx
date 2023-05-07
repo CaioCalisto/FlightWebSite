@@ -11,7 +11,7 @@ type DateTextType = {
 
 function DateText({ label, onDateChanged } : DateTextType) {
 
-  const [date, setDate] = useState(new Date());
+  const [date, setDate] = useState<Date | null>(null);
   const changeDate = (date: Date) => {
     setDate(date)
     onDateChanged(date)

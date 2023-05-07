@@ -1,4 +1,4 @@
-import { Box, MenuItem, TextField } from "@mui/material";
+import { Box, MenuItem, TextField, useMediaQuery } from "@mui/material";
 import React, { useState } from "react";
 
 type LocationTextType = {
@@ -13,7 +13,7 @@ function LocationText({ label, onLocationChanged }: LocationTextType) {
     <Box
       component="form"
       sx={{
-        "& .MuiTextField-root": {width: "25ch" },
+        "& .MuiTextField-root": {width: '45ch' },
       }}
       noValidate
       autoComplete="off"

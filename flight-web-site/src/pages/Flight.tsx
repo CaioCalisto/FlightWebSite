@@ -37,7 +37,7 @@ function Flight() {
 
   return (
     <>
-      <Stack direction="column" gap={4}>
+      <Stack direction="column" gap={2}>
         <TripChose />
 
         <Stack direction="row">

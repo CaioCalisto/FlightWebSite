@@ -6,7 +6,7 @@ function Passengers() {
     <Box
       component="form"
       sx={{
-        "& .MuiTextField-root": {width: "14ch" },
+        "& .MuiTextField-root": {width: "30ch" },
       }}
       noValidate
       autoComplete="off">

@@ -12,17 +12,17 @@ function PublicLayout() {
 
   if (medium) {
     return (
-      <div>
-        <section>
+      <>
+        <header>
           <Container component="header" style={{ maxWidth: "100%" }}>
             <Header />
           </Container>
-        </section>
-        <section>
+        </header>
+        <nav>
           <Container style={{ padding: "0", maxWidth: "100%" }}>
             <HorizontalMenu />
           </Container>
-        </section>
+        </nav>
         <Divider />
         <main>
           <Container style={{ maxWidth: "100%" }}>
@@ -30,30 +30,30 @@ function PublicLayout() {
           </Container>
         </main>
         <Divider />
-        <section>
+        <footer>
           <Container
             component="footer"
             style={{ position: "fixed", bottom: "0", maxWidth: "100%" }}
           >
             <Footer />
           </Container>
-        </section>
-      </div>
+        </footer>
+      </>
     );
   }
 
   return (
     <>
-      <section>
+      <header>
         <Container component="header">
           <Header />
         </Container>
-      </section>
-      <section>
+      </header>
+      <nav>
         <Container style={{ maxWidth: "100%" }}>
           <SideBarMenu />
         </Container>
-      </section>
+      </nav>
       <Divider />
       <main>
       <Container style={{ maxWidth: "100%" }}>
@@ -61,14 +61,14 @@ function PublicLayout() {
           </Container>
       </main>
       <Divider />
-      <section>
+      <footer>
         <Container
           component="footer"
           style={{ position: "fixed", bottom: "0" }}
         >
           <SmallFooter />
         </Container>
-      </section>
+      </footer>
     </>
   );
 }

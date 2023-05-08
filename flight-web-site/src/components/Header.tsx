@@ -11,8 +11,8 @@ function Header() {
       </Grid>
       <Grid item xs={6}>
         <Stack direction="row" spacing={3} justifyContent="end">
-          <LanguageIcon />
-          <PersonIcon />
+          <LanguageIcon style={{width: "8%", height: "8%"}} />
+          <PersonIcon style={{width: "8%", height: "8%"}} />
         </Stack>
       </Grid>
     </Grid>

@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
-import PublicLayout from './components/layouts/PublicLayout';
+import PublicLayout from './layouts/PublicLayout';
 import CarHire from './pages/CarHire';
-import Flight from './pages/Flight';
+import Flight from './functionalities/fligths/pages/Flight';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
 

@@ -9,9 +9,9 @@ import {
   TextField,
 } from "@mui/material";
 import React, { forwardRef, useState } from "react";
-import DateText from "../components/DateText";
-import LocationText from "../components/LocationText";
-import Passengers from "../components/Passengers";
+import DateText from "../../../components/DateText";
+import DropDownText from "../../../components/DropDownText";
+import Passengers from "../../../components/Passengers";
 import TripChose from "../components/TripChose";
 
 function Flight() {
@@ -35,14 +35,16 @@ function Flight() {
     setTo(to);
   };
 
+  let availableLocations = ["Porto", "Lisbon", "Dublin", "Cork"]
+
   return (
     <>
       <Stack direction="column" gap={2}>
         <TripChose />
 
         <Stack direction="row">
-          <LocationText label="From" onLocationChanged={changeFrom} />
-          <LocationText label="To" onLocationChanged={changeTo} />
+          <DropDownText availableOption={availableLocations} label="From" onLocationChanged={changeFrom} />
+          <DropDownText availableOption={availableLocations} label="To" onLocationChanged={changeTo} />
         </Stack>
 
         <Stack direction="row">

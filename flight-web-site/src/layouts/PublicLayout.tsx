@@ -1,11 +1,11 @@
 import { Container, Divider, useMediaQuery } from "@mui/material";
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Footer from "../Footer";
-import Header from "../Header";
-import HorizontalMenu from "../HorizontalMenu";
-import SideBarMenu from "../SideBarMenu";
-import SmallFooter from "../SmallFooter";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import HorizontalMenu from "../components/HorizontalMenu";
+import SideBarMenu from "../components/SideBarMenu";
+import SmallFooter from "../components/SmallFooter";
 
 function PublicLayout() {
   const medium = useMediaQuery("(min-width:768px)");

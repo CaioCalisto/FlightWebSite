@@ -1,14 +1,13 @@
 import { Box, MenuItem, TextField, useMediaQuery } from "@mui/material";
 import React, { useState } from "react";
 
-type LocationTextType = {
+type DropDownTextType = {
   label: string;
+  availableOption: string[],
   onLocationChanged: (value: string) => void
 };
 
-const availableLocations = ["Porto", "Lisbon", "Dublin", "Cork"];
-
-function LocationText({ label, onLocationChanged }: LocationTextType) {
+function DropDownText({ label, availableOption, onLocationChanged }: DropDownTextType) {
   return (
     <Box
       component="form"
@@ -19,7 +18,7 @@ function LocationText({ label, onLocationChanged }: LocationTextType) {
       autoComplete="off"
     >
       <TextField select label={label} onChange={(e) => onLocationChanged(e.target.value)}>
-        {availableLocations.map((option) => (
+        {availableOption.map((option) => (
           <MenuItem key={option} value={option}>
             {option}
           </MenuItem>
@@ -29,4 +28,4 @@ function LocationText({ label, onLocationChanged }: LocationTextType) {
   );
 }
 
-export default LocationText;
+export default DropDownText;

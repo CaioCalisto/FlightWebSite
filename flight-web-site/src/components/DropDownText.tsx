@@ -1,5 +1,5 @@
 import { Box, MenuItem, SxProps, TextField, Theme, useMediaQuery } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
 
 type DropDownTextType = {
   label: string;
@@ -13,9 +13,6 @@ function DropDownText({ label, availableOption, onDataChanged, style }: DropDown
     <Box
       component="form"
       sx={style}
-      // sx={{
-      //   "& .MuiTextField-root": {width: '45ch' },
-      // }}
       noValidate
       autoComplete="off"
     >

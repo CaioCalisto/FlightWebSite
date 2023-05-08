@@ -1,29 +1,19 @@
-import {
-  Box,
-  Button,
-  FormControlLabel,
-  Grid,
-  Radio,
-  RadioGroup,
-  Stack,
-  TextField,
-} from "@mui/material";
-import React, { forwardRef, useState } from "react";
+import { Button, Stack } from "@mui/material";
+import React, { useState } from "react";
 import DateText from "../../../components/DateText";
 import DropDownText from "../../../components/DropDownText";
-import Passengers from "../../../components/Passengers";
 import TripChose from "../components/TripChose";
 
 function Flight() {
   const [departDate, setDepart] = useState<Date | null>(null);
   const changeDepart = (date: Date) => {
-    setDepart(date)
-  }
+    setDepart(date);
+  };
 
   const [returnDate, setReturnDate] = useState<Date | null>(null);
   const changeReturnDate = (date: Date) => {
-    setReturnDate(date)
-  }
+    setReturnDate(date);
+  };
 
   const [from, setFrom] = useState("");
   const changeFrom = (from: string) => {
@@ -36,10 +26,10 @@ function Flight() {
   };
 
   const passengers = (passenger: string) => {
-    console.log('Passenger ' + passenger)
-  }
+    console.log("Passenger " + passenger);
+  };
 
-  let availableLocations = ["Porto", "Lisbon", "Dublin", "Cork"]
+  let availableLocations = ["Porto", "Lisbon", "Dublin", "Cork"];
 
   return (
     <>
@@ -47,9 +37,18 @@ function Flight() {
         <TripChose />
 
         <Stack direction="row">
-        {/*    "& .MuiTextField-root": {width: '45ch' }    */}
-          <DropDownText style={{"& .MuiTextField-root": {width: '45ch' }}} availableOption={availableLocations} label="From" onDataChanged={changeFrom} />
-          <DropDownText style={{"& .MuiTextField-root": {width: '45ch' }}} availableOption={availableLocations} label="To" onDataChanged={changeTo} />
+          <DropDownText
+            style={{ "& .MuiTextField-root": { width: "45ch" } }}
+            availableOption={availableLocations}
+            label="From"
+            onDataChanged={changeFrom}
+          />
+          <DropDownText
+            style={{ "& .MuiTextField-root": { width: "45ch" } }}
+            availableOption={availableLocations}
+            label="To"
+            onDataChanged={changeTo}
+          />
         </Stack>
 
         <Stack direction="row">
@@ -57,7 +56,12 @@ function Flight() {
             <>
               <DateText label="Depart" onDateChanged={changeDepart} />
               <DateText label="Return" onDateChanged={changeReturnDate} />
-              <DropDownText style={{"& .MuiTextField-root": {width: '30ch' }}} availableOption={["1", "2", "3"]} label="Passengers" onDataChanged={passengers} />
+              <DropDownText
+                style={{ "& .MuiTextField-root": { width: "30ch" } }}
+                availableOption={["1", "2", "3"]}
+                label="Passengers"
+                onDataChanged={passengers}
+              />
             </>
           )}
           {departDate != null && returnDate != null && (

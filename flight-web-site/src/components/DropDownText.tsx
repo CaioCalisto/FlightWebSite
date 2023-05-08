@@ -1,23 +1,25 @@
-import { Box, MenuItem, TextField, useMediaQuery } from "@mui/material";
+import { Box, MenuItem, SxProps, TextField, Theme, useMediaQuery } from "@mui/material";
 import React, { useState } from "react";
 
 type DropDownTextType = {
   label: string;
   availableOption: string[],
-  onLocationChanged: (value: string) => void
+  onDataChanged: (value: string) => void,
+  style: SxProps<Theme>
 };
 
-function DropDownText({ label, availableOption, onLocationChanged }: DropDownTextType) {
+function DropDownText({ label, availableOption, onDataChanged, style }: DropDownTextType) {
   return (
     <Box
       component="form"
-      sx={{
-        "& .MuiTextField-root": {width: '45ch' },
-      }}
+      sx={style}
+      // sx={{
+      //   "& .MuiTextField-root": {width: '45ch' },
+      // }}
       noValidate
       autoComplete="off"
     >
-      <TextField select label={label} onChange={(e) => onLocationChanged(e.target.value)}>
+      <TextField select label={label} onChange={(e) => onDataChanged(e.target.value)}>
         {availableOption.map((option) => (
           <MenuItem key={option} value={option}>
             {option}

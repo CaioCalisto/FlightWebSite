@@ -35,6 +35,10 @@ function Flight() {
     setTo(to);
   };
 
+  const passengers = (passenger: string) => {
+    console.log('Passenger ' + passenger)
+  }
+
   let availableLocations = ["Porto", "Lisbon", "Dublin", "Cork"]
 
   return (
@@ -43,8 +47,9 @@ function Flight() {
         <TripChose />
 
         <Stack direction="row">
-          <DropDownText availableOption={availableLocations} label="From" onLocationChanged={changeFrom} />
-          <DropDownText availableOption={availableLocations} label="To" onLocationChanged={changeTo} />
+        {/*    "& .MuiTextField-root": {width: '45ch' }    */}
+          <DropDownText style={{"& .MuiTextField-root": {width: '45ch' }}} availableOption={availableLocations} label="From" onDataChanged={changeFrom} />
+          <DropDownText style={{"& .MuiTextField-root": {width: '45ch' }}} availableOption={availableLocations} label="To" onDataChanged={changeTo} />
         </Stack>
 
         <Stack direction="row">
@@ -52,7 +57,7 @@ function Flight() {
             <>
               <DateText label="Depart" onDateChanged={changeDepart} />
               <DateText label="Return" onDateChanged={changeReturnDate} />
-              <Passengers />
+              <DropDownText style={{"& .MuiTextField-root": {width: '30ch' }}} availableOption={["1", "2", "3"]} label="Passengers" onDataChanged={passengers} />
             </>
           )}
           {departDate != null && returnDate != null && (

@@ -7,20 +7,14 @@ import HotelIcon from '@mui/icons-material/Hotel';
 
 function HorizontalMenu() {
   return (
-    <Stack direction={"row"} spacing={4} justifyContent="center">
-      <div>
+    <Stack direction={"row"} spacing={4} justifyContent="center" alignItems="center">
         <Link to="/flights">
           <AirplanemodeActiveIcon />Flight
-        </Link>      
-      </div>
-      <div>
+        </Link>  
         <Link to="/carhire">
           <DirectionsCarIcon/> Car Hire
         </Link>
-      </div>
-      <div>
         <HotelIcon /> Hotel
-      </div>
     </Stack>
   )
 }

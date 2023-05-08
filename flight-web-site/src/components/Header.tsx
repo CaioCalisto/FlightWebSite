@@ -3,8 +3,7 @@ import React from 'react'
 import PersonIcon from '@mui/icons-material/Person';
 import LanguageIcon from '@mui/icons-material/Language';
 
-function Header() {
-  return (
+const Header = () => (
     <Grid container alignItems="center">
       <Grid item xs={6}>
         <img src="src/assets/ACME-logo.png" style={{ width: "25%"}}/>
@@ -17,6 +16,6 @@ function Header() {
       </Grid>
     </Grid>
   )
-}
+
 
 export default Header

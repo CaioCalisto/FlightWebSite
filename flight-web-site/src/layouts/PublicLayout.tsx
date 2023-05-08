@@ -3,8 +3,8 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import HorizontalMenu from "../components/HorizontalMenu";
-import SideBarMenu from "../components/SideBarMenu";
+import HorizontalMenu from "../components/navs/HorizontalMenu";
+import SideBarMenu from "../components/navs/SideBarMenu";
 import SmallFooter from "../components/SmallFooter";
 
 function PublicLayout() {

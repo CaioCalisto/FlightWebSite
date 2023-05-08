@@ -1,7 +1,7 @@
 import { Button, Stack } from "@mui/material";
 import React, { useState } from "react";
-import DateText from "../../../components/DateText";
-import DropDownText from "../../../components/DropDownText";
+import DateText from "../../../components/textboxes/DateText";
+import DropDownText from "../../../components/textboxes/DropDownText";
 import TripChose from "../components/TripChose";
 
 function Flight() {

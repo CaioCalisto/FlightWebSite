@@ -10,7 +10,7 @@ function Header() {
         <img src="src/assets/ACME-logo.png" style={{ width: "25%"}}/>
       </Grid>
       <Grid item xs={6}>
-        <Stack direction="row" spacing={3} justifyContent="end">
+        <Stack direction="row" spacing={2} justifyContent="end">
           <LanguageIcon style={{width: "8%", height: "8%"}} />
           <PersonIcon style={{width: "8%", height: "8%"}} />
         </Stack>

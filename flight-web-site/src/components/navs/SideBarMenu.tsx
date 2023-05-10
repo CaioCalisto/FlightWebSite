@@ -6,8 +6,11 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
+  Stack,
 } from "@mui/material";
 import { Box } from "@mui/system";
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import React from "react";
 import { Link } from "react-router-dom";
 import AirplanemodeActiveIcon from '@mui/icons-material/AirplanemodeActive';
@@ -32,7 +35,9 @@ function SideBarMenu() {
 
   return (
     <>
-      <p onClick={toggleDrawer(true)}>Menu</p>
+      <IconButton onClick={toggleDrawer(true)} aria-label="settings">
+            <MoreVertIcon />
+          </IconButton>
       <Drawer anchor={"left"} open={state} onClose={toggleDrawer(false)}>
         <Box
           sx={{ width: 150 }}
